@@ -1,0 +1,5 @@
+select * from zdz.account_balance_20181121 where account_id in('AC1811201250302160231009508437126433','AC1811201629112600212004444498060518','AC1811201155192060205010167711514645');
+
+
+
+ java.lang.NoSuchMethodError: org.apache.hadoop.hbase.protobuf.generated.ClientProtos$ScanRequest$Builder.setRenew(Z)Lorg/apache/hadoop/hbase/protobuf/generated/ClientProtos$ScanRequest$Builder;

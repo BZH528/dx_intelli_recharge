@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<root>
+    <kafka>
+        <ipport>10.193.11.13:9092,10.193.11.14:9092</ipport>
+        <zookeeper>10.193.11.11:2181,10.193.11.12:2181,10.193.11.13:2181</zookeeper>
+        <topic>buryData,order</topic>
+        <groupid>one</groupid>
+    </kafka>
+
+    <mysql>
+        <url>jdbc:mysql://10.193.11.12:3306</url>
+        <username>finebi</username>
+        <password>Fine>1939BI</password>
+        <dataBase>xiaojinhe</dataBase>
+        <dayTable>daytime_feature</dayTable>
+        <realTable>realtime_feature</realTable>
+    </mysql>
+
+    <spark>
+        <streamname>GlodenBox</streamname>
+        <seconds>20</seconds>
+    </spark>
+
+    <hbase>
+        <allUser>tmp:allUser</allUser>
+        <todayVisitUser>hcharge:todayVisitUser</todayVisitUser>
+        <family>non</family>
+        <column>chanal</column>
+        <hbasezookeeper>10.193.11.11:2181,10.193.11.12:2181,10.193.11.13:2181</hbasezookeeper>
+    </hbase>
+
+
+    <path>
+        <checkpointdir>hdfs://localhost:9000/hcharge/checkdir/</checkpointdir>
+        <confdir>/opt/goldenBoxConf/</confdir>
+    </path>
+</root>

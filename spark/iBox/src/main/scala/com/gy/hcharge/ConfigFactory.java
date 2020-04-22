@@ -25,13 +25,14 @@ public class ConfigFactory {
     public static String realTable="realtime_feature";
     public static String dayTable="daytime_feature";
 
+
     public static String today_visit_user="tmp:todayVisitUser";
     public static String all_user="tmp:allUser";
     public static String family="non";
     public static String column="chanal";
     public static String hbasezookeeper="10.193.11.11:2181,10.193.11.12:2181,10.193.11.13:2181";
 
-    public static String sparkstreamname="GlodenBox";
+    public static String sparkstreamname="writeHbaseTest";
     public static int sparkstreamseconds=20;
     public static String checkpointdir="hdfs:///user/spark_works/checkdir/";
     public static String confPath="/opt/goldenBoxConf/";

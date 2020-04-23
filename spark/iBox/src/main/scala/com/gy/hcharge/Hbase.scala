@@ -51,6 +51,32 @@ object Hbase {
   }
 
 
+ def getValue(tableName:String,key:String):String={
+   val table:Table = HbaseUtils.getTable(TableName.valueOf(tableName))
+   var str="";
+   try{
+     val result = table.get(new Get(Bytes.toBytes(key)))
+     if(!result.isEmpty){
+       str = Bytes.toString(result.getValue(Bytes.toBytes("non"),Bytes.toBytes("value")))
+     }
+   }catch {
+     case e:Exception=>e.printStackTrace()
+   }
+   str
+ }
+
+  def putValue(tableName:String,key:String,value:String)={
+    val table:Table = HbaseUtils.getTable(TableName.valueOf(tableName))
+    val put = new Put(Bytes.toBytes(key))
+    put.add(Bytes.toBytes("non"),Bytes.toBytes("value"),Bytes.toBytes(value))
+    table.put(put)
+  }
+
+
+
+
+
+
   def getNewUserList(userMap:scala.collection.mutable.HashMap[String,String] , tableName:String)={
     var userList:List[String] = List()
     var getList: List[Get] = List()

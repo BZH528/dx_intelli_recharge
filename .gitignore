@@ -37,4 +37,5 @@ local.properties
 .recommenders/
 # intellij
 .idea
+*.iml
 target/
